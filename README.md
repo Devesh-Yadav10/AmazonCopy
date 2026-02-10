@@ -1,2 +1,6 @@
-###Amazon Copy:
-Day 1: Made basic navbar and slideshow elements with button functionality to show multiple images and getting input on main file from search box.
+### Day 1 – Amazon Copy Project
+
+- Implemented a basic navigation bar
+- Created a slideshow component with button-based image switching
+- Added functionality to display multiple images dynamically
+- Integrated search box input handling in the main file

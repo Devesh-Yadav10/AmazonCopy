@@ -1,0 +1,165 @@
+/* General Resets */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Styles */
+#navbar {
+    background-color: #131921;
+}
+
+#inputdropdown {
+    background-color: #f3f3f3;
+    border-right: 1px solid #cdcdcd;
+    color: #555;
+    font-size: 12px;
+}
+
+#GoButton {
+    background-color: #f4a339;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+#GoButton:hover {
+    background-color: #e39126;
+}
+
+#navBar2 {
+    font-size: 14px;
+    background-color: #232f3e;
+    overflow-x: auto; /* Handles small screens better */
+    white-space: nowrap;
+}
+
+#navBar2 li {
+    border: 1px solid transparent;
+    padding: 8px 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+#navBar2 li:hover {
+    border: 1px solid white;
+}
+
+/* THE MAIN FIX: 
+   Changed from absolute to relative.
+   This keeps the container in the document flow so the footer is pushed down.
+   Margin-top pulls it up to overlap the hero image.
+*/
+#containers {
+    position: relative;
+    margin-top: -250px; /* Adjust this value to control overlap */
+    z-index: 10;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+/* Grid Layout for Cards */
+#extrasContainer {
+    display: grid;
+    /* Grid is handled by Tailwind classes in JSX, but backup here: */
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Individual Cards */
+.extras {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content; /* Ensures all cards in a row match height */
+    min-height: 400px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.extrasTitle {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.extrasLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.extrasLinks a {
+    width: 47%; /* 2 items per row inside card */
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.extrasLinks img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.hi {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.extrasBottom {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #007185;
+    cursor: pointer;
+}
+
+.extrasBottom:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+/* Carousel Styles */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Hide scrollbar for Chrome/Safari/Opera */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.carousel {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.carousel img {
+    flex-shrink: 0;
+    background: white;
+}
+
+/* Gradient Mask for Hero Image (Optional Fade Effect) */
+.mask-image-gradient {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}

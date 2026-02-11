@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './components/HomePage/Navbar'
+import Home  from './components/HomePage/index.jsx'
 function App() {
   const [count, setCount] = useState(0)
   const handleSearch =(inputvalue) =>{
@@ -9,7 +9,7 @@ function App() {
   } 
   return (
     <>
-      <Navbar onType={handleSearch}/>
+      <Home onType={handleSearch}/>
         
     </>
   )
